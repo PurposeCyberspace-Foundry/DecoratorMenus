@@ -43,7 +43,8 @@ if __name__=="__main__":
 ## Example Output
 The user can obtain help on your program using the -h flag. e.g.
 ```
-> python example.py -h```
+> python example.py -h
+```
 ```
 usage: example.py [-h] {do-func,second-func} ...
 
@@ -57,7 +58,8 @@ optional arguments:
 ```
 Subcommands can similarly use the help flag
 ```
-> python example.py second-func -h```
+> python example.py second-func -h
+```
 ```
 usage: example.py second-func [-h] [-f]
 
