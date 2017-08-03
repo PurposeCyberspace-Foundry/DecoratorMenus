@@ -3,6 +3,8 @@ DecoratorMenus
 This class allows the use of @decorators to create submenu-driven programs easily and quickly in python
 the menu_item options are all passed directly to the "add_submenu" argparse function
 the argument options are passed to the "add_argument" argparse function
+
+for example use, see example.py
 """
 import argparse
 ap = argparse.ArgumentParser()
