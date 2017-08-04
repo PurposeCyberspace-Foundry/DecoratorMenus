@@ -19,8 +19,8 @@ ap = argparse.ArgumentParser()
 sp = ap.add_subparsers()
 
 # this will register a function or a function with arguments as a menu command
-# it returns the parser action, so theoretically you can do more with the
-# actiongroup
+# it returns the function with the actiongroup attached, so theoretically you
+# can do more with the actiongroup, probably using normal argparse routines
 def menu_item(*args, **kwargs):
     def next_item_processor(func):
         # no command name provided. no problem.

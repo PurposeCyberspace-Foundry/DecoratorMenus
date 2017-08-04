@@ -27,7 +27,7 @@ def like_or_list(item_list, python):
 # here the name of the command is inferred from the function name
 @menu_item(help="I'm another option")
 @argument('-f', '--force', action="store_true", help="Try harder")
-def force_it(force):
+def try_again(force):
     if not force :
         print "you're not trying hard enough"
 
