@@ -11,13 +11,18 @@ After including `DecoratorMenus` in your file
 An example is worth 1000 words...
 ```
 # This code is available in example.py
-
+"""
+A short example of DecoratorMenus
+"""
 from DecoratorMenus import *
 
 # Menu Item 1
+# a menu_item is a tier-2 command
 @menu_item("do-func", help="I am a function that does something")
+# each argument must match a func() argument
 @argument('-l', '--list', dest="item_list", nargs="+", help="print a list")
 @argument('-p', '--python', action="store_true", help="I like python")
+# this must be called "func" and have parameters as indicated in the @argument(s)
 def func(item_list, python):
     if python:
         print "I like python, too"
