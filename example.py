@@ -6,12 +6,13 @@ from DecoratorMenus import *
 
 # Menu Item 1
 # a menu_item is a tier-2 command
-@menu_item("do-func", help="I am a function that does something")
-# each argument must match a func() argument
+
+@menu_item("try-it", help="I am a function that does something")
+# each argument must match a function argument
 @argument('-l', '--list', dest="item_list", nargs="+", help="print a list")
 @argument('-p', '--python', action="store_true", help="I like python")
-# this must be called "func" and have parameters as indicated in the @argument(s)
-def func(item_list, python):
+# this must have parameters as indicated in the @argument(s)
+def like_or_list(item_list, python):
     if python:
         print "I like python, too"
 
@@ -19,10 +20,14 @@ def func(item_list, python):
         print "here's your list"
         print item_list
 
+    if not (python or item_list):
+        print "ok, you tried"
+
 # Menu Item 2
-@menu_item("second-func", help="I'm another option")
+# here the name of the command is inferred from the function name
+@menu_item(help="I'm another option")
 @argument('-f', '--force', action="store_true", help="Try harder")
-def func(force):
+def force_it(force):
     if not force :
         print "you're not trying hard enough"
 
