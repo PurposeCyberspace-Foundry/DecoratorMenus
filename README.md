@@ -11,9 +11,7 @@ After including `DecoratorMenus` in your file
 An example is worth 1000 words...
 ```
 # This code is available in example.py
-"""
-A short example of DecoratorMenus
-"""
+
 """
 A short example of DecoratorMenus
 """
